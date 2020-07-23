@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+#root {
+    padding: 16px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.panel {
+    background: #f1f1f1;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow:  3px 3px 5px #9d9d9d, 
+             -3px -3px 5px #fff;
+    border-left: rgba(255, 255, 255, .30) 1px solid;
+    border-top: rgba(255, 255, 255, .50) 1px solid;
+    border-bottom: rgba(203, 207, 202, 0.50) 1px solid;
+    border-right: rgba(203, 207, 202, 0.30) 1px solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inset {
+    background: #f1f1f1;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow:  inset 3px 3px 5px #9d9d9d, 
+             inset -3px -3px 5px #fff;
+    border-left: rgba(255, 255, 255, .30) 1px solid;
+    border-top:  rgba(255, 255, 255, .50) 1px solid;
+    border-bottom: gba(203, 207, 202, 0.50) 1px solid;
+    border-right: rgba(203, 207, 202, 0.30) 1px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    box-shadow:  inset 1px 1px 2px #cbcfca, 
+             inset -1px -1px 3px #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.margin-8 {
+    margin: 8px !important;
+}
+.margin-16 {
+    margin: 16px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.margin-v-8 {
+    margin: 8px 0px !important;;
+}
+.margin-v-16 {
+    margin: 16px 0px !important;;
+}
+
+.margin-h-8 {
+    margin: 0px 8px !important;;
+}
+.margin-h-16 {
+    margin: 0px 16px !important;;
+}
+
+.padding-8 {
+    padding: 8px !important;
+}
+.padding-16 {
+    padding: 16px !important;
+}
+
+.padding-v-8 {
+    padding: 8px 0px !important;;
+}
+.padding-v-16 {
+    padding: 16px 0px !important;;
+}
+
+.padding-h-8 {
+    padding: 0px 8px !important;;
+}
+.padding-h-16 {
+    padding: 0px 16px !important;;
 }

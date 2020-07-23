@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { Auth0Provider } from "./react-auth0-spa";
+import config from "./auth_config.json";
+
+const onRedirectCallback = appState => {
+  window.history.replaceState(
+    {},
+    document.title,
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  );
+};
+
+
+const ApolloApp = () => (
+    <Auth0Provider
+      domain={config.domain}
+      client_id={config.clientId}
+      redirect_uri={window.location.origin}
+      audience={config.audience}
+      onRedirectCallback={onRedirectCallback}
+    >
+      <App className="content" />
+    </Auth0Provider>
+)
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ApolloApp />,
   document.getElementById('root')
 );
 
