@@ -1,6 +1,6 @@
 {
     "domain": "clocke.auth0.com",
     "clientId": "tKfUwxoUz0Y3HWZRNuDM27fNkLzA8qn5",
-    "redirect_uri": "http://localhost:3000/clocke",
+    "redirect_uri": "https://ctrepka.github.io/clocke",
     "audience": "https://clocke.auth0.com/api/v2/"
 }
